@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Post;
+use App\Comment;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,5 +14,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
+        $this->call(PostsTableSeeder::class);
+        // $this->call(CommentsTableSeeder::class);
     }
 }

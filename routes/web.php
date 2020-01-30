@@ -18,3 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('posts', 'PostsController', ['only' => ['index', 'show']]);
+
+// Admin Boundary
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin'], function () {
+    Route::resource('posts', 'PostsController');
+});

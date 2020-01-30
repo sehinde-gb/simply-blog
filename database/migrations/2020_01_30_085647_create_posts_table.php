@@ -24,10 +24,10 @@ class CreatePostsTable extends Migration
         });
         
         Schema::table('posts', function(Blueprint $table) {
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            //$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
 
-        //Schema::enableForeignKeyConstraints();
+        
     }
 
     /**
