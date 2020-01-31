@@ -13,7 +13,9 @@ This project uses Laravel 6
 
 ## Basic Installation
 
-### This project has been developed using the Laravel Valet environment
+### This project has been developed using the Laravel Valet environment 
+
+### The project uses bigInt values instead of int values in place of the database schema
 
 git clone https://github.com/sehinde-gb/simply-blog.git
 
