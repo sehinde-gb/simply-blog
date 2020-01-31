@@ -1,6 +1,6 @@
 <?php
 /**
- * This is the Comment Request class
+ * This is the Post Request class
  * 
  * PHP version 7.2
  * 
@@ -15,7 +15,7 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 
 /**
- * This class is the Comment Request class
+ * This class is the Post Request class
  * 
  * @category Vendor/Project
  * @package  Vendor/Project
@@ -24,7 +24,7 @@ use Illuminate\Foundation\Http\FormRequest;
  * @link     Install this on your machine
  *           PHP Version 7.2
  */
-class CommentRequest extends FormRequest
+class PostRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -44,7 +44,8 @@ class CommentRequest extends FormRequest
     public function rules()
     {
         return [
-            'text' => 'required|max:100',
+            'title' => 'required',
+            'body' => 'required'
         ];
     }
 }

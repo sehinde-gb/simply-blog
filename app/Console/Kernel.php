@@ -1,10 +1,30 @@
 <?php
-
+/**
+ * This class is the Kernel class
+ * 
+ * PHP version 7.2
+ * 
+ * @category Vendor/Project
+ * @package  Vendor/Project
+ * @author   Sehinde Raji <sehinde@outlook.com>
+ * @license  www.laravel.com Laravel
+ * @link     Install this on your machine        
+ */
 namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
+/**
+ * This class is the Kernel class
+ * 
+ * @category Vendor/Project
+ * @package  Vendor/Project
+ * @author   Sehinde Raji <sehinde@outlook.com>
+ * @license  www.laravel.com Laravel
+ * @link     Install this on your machine 
+ *           php version 7.2
+ */
 class Kernel extends ConsoleKernel
 {
     /**
@@ -19,7 +39,8 @@ class Kernel extends ConsoleKernel
     /**
      * Define the application's command schedule.
      *
-     * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
+     * @param \Illuminate\Console\Scheduling\Schedule $schedule The scheduler
+     * 
      * @return void
      */
     protected function schedule(Schedule $schedule)
@@ -37,6 +58,6 @@ class Kernel extends ConsoleKernel
     {
         $this->load(__DIR__.'/Commands');
 
-        require base_path('routes/console.php');
+        include base_path('routes/console.php');
     }
 }

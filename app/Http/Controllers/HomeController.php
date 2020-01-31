@@ -1,9 +1,30 @@
 <?php
-
+/**
+ * This class is the Home Controller class
+ * 
+ * PHP version 7.2
+ * 
+ * @category Vendor/Project
+ * @package  Vendor/Project
+ * @author   Sehinde Raji <sehinde@outlook.com>
+ * @license  www.laravel.com Laravel
+ * @link     Install this on your machine        
+ */
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+/**
+ * This class is the Home Controller class
+ * 
+ * PHP version 7.2
+ * 
+ * @category Vendor/Project
+ * @package  Vendor/Project
+ * @author   Sehinde Raji <sehinde@outlook.com>
+ * @license  www.laravel.com Laravel
+ * @link     Install this on your machine        
+ */
 class HomeController extends Controller
 {
     /**

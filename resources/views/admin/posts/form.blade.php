@@ -32,4 +32,4 @@
 <!-- button-centre -->
 <div class="button-centre">
         {!! Form::submit($submitButtonText, ['class' => 'btn btn-primary', 'data-confirm' => 'Are you sure about that?']) !!}
-    </div>
+</div>

@@ -48,7 +48,7 @@
                             <div class="d-flex w-100 justify-content-between">
                                 <h6 class="mb-1">{{ $comment->user->name }} replied:</h6>
                                 <p></p>
-                                <small>{{\Carbon\Carbon::parse(dd($comment->created_at))->diffForHumans()}}</small>
+                                <small>{{($comment->created_at)}}</small>
                             </div>
                             <p class="mb-1">{{ $comment->text }}</p>    
                                 

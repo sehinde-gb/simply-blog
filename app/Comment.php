@@ -1,5 +1,15 @@
 <?php
-
+/**
+ * This class is the comment class
+ * 
+ * PHP version 7.2
+ * 
+ * @category Vendor/Project
+ * @package  Vendor/Project
+ * @author   Sehinde Raji <sehinde@outlook.com>
+ * @license  www.laravel.com Laravel
+ * @link     Install this on your machine 
+ */
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
@@ -7,6 +17,16 @@ use App\Post;
 use App\User;
 use Carbon\Carbon;
 
+/**
+ * This class is the comment class
+ * 
+ * @category Vendor/Project
+ * @package  Vendor/Project
+ * @author   Sehinde Raji <sehinde@outlook.com>
+ * @license  www.laravel.com Laravel
+ * @link     Install this on your machine
+ * PHP version 7
+ */
 class Comment extends Model
 {
     /**
@@ -24,7 +44,6 @@ class Comment extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    
     public function post()
     {
         return $this->belongsTo(\App\Post::class);
@@ -36,7 +55,6 @@ class Comment extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    
     public function user()
     {
         return $this->belongsTo(\App\User::class);
@@ -44,12 +62,13 @@ class Comment extends Model
 
 
      /**
-     * Return the created attribute and convert to UK
-     * format.
-     *
-     * @param $date
-     * @return string
-     */
+      * Return the created attribute and convert to UK
+      * format.
+      *
+      * @param integer $date the date is returned in a UK format
+
+      * @return integer $date
+      */
     public function getCreatedAtAttribute($date)
     {
         return Carbon::parse($date)->format('d-m-Y');
@@ -58,9 +77,10 @@ class Comment extends Model
     /**
      * Return the created attribute and convert to UK
      * format.
-     *
-     * @param $date
-     * @return string
+     * 
+     * @param integer $date the date is returned and converted in to diff for humans
+     * 
+     * @return integer $date
      */
     public function getCreatedForHumans($date)
     {

@@ -1,10 +1,30 @@
 <?php
-
+/**
+ * This class is the Route Service Provider class
+ * 
+ * PHP version 7.2
+ * 
+ * @category Vendor/Project
+ * @package  Vendor/Project
+ * @author   Sehinde Raji <sehinde@outlook.com>
+ * @license  www.laravel.com Laravel
+ * @link     Install this on your machine 
+ */
 namespace App\Providers;
 
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Route;
 
+/**
+ * This class is the RouteService Provider class
+ * 
+ * @category Vendor/Project
+ * @package  Vendor/Project
+ * @author   Sehinde Raji <sehinde@outlook.com>
+ * @license  www.laravel.com Laravel
+ * @link     Install this on your machine 
+ *           php version 7.2
+ */
 class RouteServiceProvider extends ServiceProvider
 {
     /**
@@ -59,8 +79,8 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapWebRoutes()
     {
         Route::middleware('web')
-             ->namespace($this->namespace)
-             ->group(base_path('routes/web.php'));
+            ->namespace($this->namespace)
+            ->group(base_path('routes/web.php'));
     }
 
     /**
@@ -73,8 +93,8 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapApiRoutes()
     {
         Route::prefix('api')
-             ->middleware('api')
-             ->namespace($this->namespace)
-             ->group(base_path('routes/api.php'));
+            ->middleware('api')
+            ->namespace($this->namespace)
+            ->group(base_path('routes/api.php'));
     }
 }

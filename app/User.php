@@ -1,5 +1,15 @@
 <?php
-
+/**
+ * This class is the User class
+ * 
+ * PHP version 7.2
+ * 
+ * @category Vendor/Project
+ * @package  Vendor/Project
+ * @author   Sehinde Raji <sehinde@outlook.com>
+ * @license  www.laravel.com Laravel
+ * @link     Install this on your machine 
+ */
 namespace App;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -8,6 +18,16 @@ use Illuminate\Notifications\Notifiable;
 use App\Post;
 use App\Comment;
 
+/**
+ * This class is the User class
+ * 
+ * @category Vendor/Project
+ * @package  Vendor/Project
+ * @author   Sehinde Raji <sehinde@outlook.com>
+ * @license  www.laravel.com Laravel
+ * @link     Install this on your machine 
+ *           php version 7.2
+ */
 class User extends Authenticatable
 {
     use Notifiable;
@@ -50,10 +70,10 @@ class User extends Authenticatable
     }
 
      /**
-     * A user can have many comments.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
+      * A user can have many comments.
+      *
+      * @return \Illuminate\Database\Eloquent\Relations\HasMany
+      */
     public function comments()
     {
         return $this->hasMany(\App\Comment::class);
