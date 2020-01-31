@@ -3,7 +3,6 @@
 
 @section('content')
 
-
 <div class="container-fluid h-100 bg-light text-dark">
   <div class="row justify-content-center align-items-center">
     <h1>Create New Post</h1>    
@@ -24,5 +23,4 @@
     </div>
 </div>
                 
-
 @endsection

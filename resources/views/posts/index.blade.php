@@ -31,12 +31,11 @@
         </td>
       </tr>
       @empty
-        <p>No relevant comments yet</p>
+        <p>Sorry no relevant posts yet</p>
       @endforelse
     </tbody>
   </table>
   </div>
-
 
 </div>
 

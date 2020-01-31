@@ -12,10 +12,6 @@
     </div><!-- #page .container -->  
 </div><!-- #wrapper -->  
 
-
-
-<p>
-    
-</p>
+<p></p>
 
 @endsection
