@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use App\Post;
 use App\User;
+use Carbon\Carbon;
 
 class Comment extends Model
 {
@@ -14,7 +15,7 @@ class Comment extends Model
      * @var array
      */
     protected $fillable = [
-        'text'
+        'text', 'user_id', 'post_id'
     ];
 
 
@@ -40,4 +41,31 @@ class Comment extends Model
     {
         return $this->belongsTo(\App\User::class);
     }
+
+
+     /**
+     * Return the created attribute and convert to UK
+     * format.
+     *
+     * @param $date
+     * @return string
+     */
+    public function getCreatedAtAttribute($date)
+    {
+        return Carbon::parse($date)->format('d-m-Y');
+    }
+
+    /**
+     * Return the created attribute and convert to UK
+     * format.
+     *
+     * @param $date
+     * @return string
+     */
+    public function getCreatedForHumans($date)
+    {
+        return Carbon::parse($date)->format('d-m-Y')->diffForHumans();
+    }
+
+
 }

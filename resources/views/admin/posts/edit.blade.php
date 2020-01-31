@@ -12,8 +12,12 @@
             {!! Form::model($post, array('route' => array('admin.posts.update', $post->id), 'method' => 'PUT')) !!}
                 {{csrf_field()}}       
                 @include('admin.posts.form', ['submitButtonText' => 'Update Post'])
+                    
                
-            {!! Form::close() !!}   
+            {!! Form::close() !!}  
+
+            
+               
         </div>
  </div>
 

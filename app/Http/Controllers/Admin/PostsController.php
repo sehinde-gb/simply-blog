@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Post;
 use App\User;
 use App\Comment;
+use Illuminate\Support\Facades\Auth;
 
 class PostsController extends Controller
 {
@@ -40,11 +41,11 @@ class PostsController extends Controller
         if (request('comment')) {
 
             $posts = Comment::where('text', request('comment'))->firstOrFail()->posts;
-        
+            //dd($posts);
         } else {
 
         $posts = Post::latest()->get()->all();
-        
+        //dd($posts);
     }
 
         return view('admin.posts.index', ['posts' => $posts]);
@@ -63,7 +64,7 @@ class PostsController extends Controller
         return view('admin.posts.create', [
             'comments' => Comment::all()
         ]);
-        dd($comments);
+        //dd($comments);
     }
 
     /**
@@ -75,13 +76,13 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
+        //dd($request);
+
+        $user = Auth::user();
+
+        $post = $user->posts()->create($request->all());
+
     
-        $post = new Post($this->validatePost());
-       
-        $post->save();
-
-        $post->comments()->attach(request('comments'));
-
         return redirect()->route('admin.posts.index')->with('info','Post Added Successfully');  
     }
 
@@ -123,12 +124,11 @@ class PostsController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //dd($request);
+        
         $post->update($this->validatePost()); 
 
-        $post->comments()->sync(request('comments'));
-        //dd($lesson); 
-        return redirect('admin.posts.index')->with('success','Post has been updated');
+       
+        return redirect()->route('admin.posts.index')->with('success','Post has been updated');
     }
 
     /**
@@ -157,8 +157,8 @@ class PostsController extends Controller
 
         return request()->validate([
             'title' => 'required',
-            'body' => 'required',
-            'comments' => 'exists:comments,id'
+            'body' => 'required'
+            
         ]);
     }
 
