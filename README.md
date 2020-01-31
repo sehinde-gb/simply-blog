@@ -39,11 +39,11 @@ Check to see if your tables have migrated successfully using your sql software a
 
 ## Browser Test
 Within our example we are using the Laravel Valet environment and we would suggest that you browse to 
-http://lesson_bookings.test/
+http://simply-blog.test/
 
+or 
 
-
-
+https://simply-blog.test/
 
 
 ## License
