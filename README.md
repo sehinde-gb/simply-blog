@@ -15,7 +15,24 @@ This project uses Laravel 6
 
 ### This project has been developed using the Laravel Valet environment 
 
-### The project uses bigInt values instead of int values in place of the database schema
+## Requirements
+
+
+You will need to create a simple blog application using Laravel. Please ensure your blog has the following functionality.
+
+1.	All users’ blogs are publicly visible.
+2.	Users must register an account to be able to create their own blog posts and leave comments.
+3.	Registered users can only edit and delete their own blog posts.
+4.	A blog post must include post title and body.
+
+Submission rules
+
+1.	You will have two days to complete the code challenge.
+2.	Please ensure all code is meets PSR12 standards (https://www.php-fig.org/psr/psr-12/).
+3.	Please have your code in a public repository either on GitHub or BitBucket.
+
+### Database Schema
+This project uses Laravel 6 BigInt values instead of Integer values as defined in the database schema that was provided.
 
 git clone https://github.com/sehinde-gb/simply-blog.git
 
