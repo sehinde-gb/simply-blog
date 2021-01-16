@@ -1,6 +1,8 @@
 <?php
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
+namespace Database\Factories;
+
 use App\Comment;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
